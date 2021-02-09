@@ -76,15 +76,47 @@ function validar(formulario) {
         for (j = 0; j < checkOK.length; j++)
             if (ch == checkOK.charAt(j))
                 break;
-            if(j == checkOK.length){
-                allValid = false;
-                break;
-            }
+        if (j == checkOK.length) {
+            allValid = false;
+            break;
+        }
 
     }
-    if(!allValid){
+    if (!allValid) {
         alert("Escriba solo letras en el campo nombre");
         formulario.nombre.value;
         return false;
     }
+
+    /* 
+    funcion solo para validar unicamente numeros
+    */
+
+    var checkSt = formulario.edad.value; //obtener el valor del edad 
+
+    //definir que es correcto para esta vailidacion
+
+    var checkOK = "1234567890";
+
+    //varieble para devolver si es verdadero o falso el valor 
+
+    var allValid = true;
+
+    for (i = 0; i < checkSt.length; i++) {
+        var ch = checkSt.charAt(i);
+        for (j = 0; j < checkOK.length; j++)
+            if (ch == checkOK.charAt(j))
+                break;
+        if (j == checkOK.length) {
+            allValid = false;
+            break;
+        }
+
+    }
+    if (!allValid) {
+        alert("Escriba solo numeros en el campo edad");
+        formulario.edad.value;
+        return false;
+    }
+
 }
