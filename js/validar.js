@@ -41,14 +41,14 @@ funcion especifica.
 
 //POO
 
-function validar(formulario){
+function validar(formulario) {
 
     //function nombre_funcion(argumentos)
     // se pueden utilizar, sentencias de control, bucles, condicionales, herencia, polimorfismo
     //sobrecarga, encapsulamiento, etc.
 
 
-    if(formulario.nombre.value.length < 5){
+    if (formulario.nombre.value.length < 5) {
 
         alert("Escriba por lo menos 5 caracteres en el campo nombre");
         //posicionar el puntero donde ocurrio el error
@@ -56,5 +56,35 @@ function validar(formulario){
         return false;
     }
 
+    /* 
+    vamos a crear el fragmento de codigo para verificar que dentro del campo
+    de nombre solo se ingresen letras
+    */
 
+    var checkSt = formulario.nombre.value; //obtener el valor del nombre 
+
+    //definir que es correcto para esta vailidacion
+
+    var checkOK = "qwertyuiopasdfghjklñzxcvbnm" + "QWERTYUIOPASDFGHJKLÑZXCVBNM";
+
+    //varieble para devolver si es verdadero o falso el valor 
+
+    var allValid = true;
+
+    for (i = 0; i < checkSt.length; i++) {
+        var ch = checkSt.charAt(i);
+        for (j = 0; j < checkOK.length; j++)
+            if (ch == checkOK.charAt(j))
+                break;
+            if(j == checkOK.length){
+                allValid = false;
+                break;
+            }
+
+    }
+    if(!allValid){
+        alert("Escriba solo letras en el campo nombre");
+        formulario.nombre.value;
+        return false;
+    }
 }
