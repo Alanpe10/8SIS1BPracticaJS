@@ -5,17 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/estilos.css">
+    <script type="text/javascript" Languague="javascript" src="js/ejercicio1.js"></script>
     <title>Ejercicio 1 JS</title>
 </head>
 <body>
-    <form action="formulario">
+    <form name="formulario">
         Problema:
         Suponga que un individuo desea invertir su capital en un banco y desea 
         saber cuanto dinero ganara despues de un mes si el banco paga a razon de 2% mensual.
         <br>
         <table align="center" border="0">
             <tr>
-                <td align="left" width="100">Introduce la cantidad a invertir</td>
+                <td align="left" width="100">Introduce la cantidad a invertir:</td>
                 <td align="center" width="150">
                     <input type="text" name="cantidad" onkeypress="return validar(event)">
                 </td>
@@ -27,16 +28,16 @@
                 </td>
             </tr>
             <tr>
-                <td>Su saldo total con interes al 2% es de:</td>
+                <td align="left" whit="100">Su saldo total con interes al 2% es de:</td>
                 <td align="center" width="150">
-                <input type="text" name="sueldoti" id="cantidad" readonly="readonly" 
+                <input type="text" name="sueldoti" readonly="readonly" 
                 class="input_text">
                 </td>
             </tr>
             <tr>
                 <td></td>
                 <td>
-                    <input type="button" value="Borrar" name="borrar" onclick="borrar()">
+                    <input type="reset" value="Borrar" name="borrar" >
                 </td>
             </tr>
         </table>
