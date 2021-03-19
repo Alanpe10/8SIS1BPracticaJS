@@ -4,47 +4,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejemplo de calculo de Amortizacion Alemán</title>
+    <title>Ejemplo de calculo de Amortización Alemán</title>
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+
+
 </head>
 <body>
-    <div class="container"></div>
-        <div class="row mt-3">
-            <div class="col-12 col-ms col-lg-6">
-                <h2 class="h2"> <i class="bi bi-calculator"></i>
-                Calcular Amortizacion metodo Alemán </h2>
-                <div class="form-group mt-2 mb-3">
+    <div class="container" >
+        <div class="row mt-3" >
+            <div class="col-12 col-sm col-lg-6" >
+                <h2 class="h2" > <i class="bi bi-calculator"></i>
+                Calcular amortización método alemán </h2>
+                <div class="form-group mt-2 mb-3" >
                     <label for="monto">Monto</label>
                     <input type="text" class="form-control" id="monto"
                     placeholder="Ingresar Monto">
 
                 </div>
-                <div class="form-group mt-2 mb-3">
-                    <label for="tiempo">Tiempo en meses</label>
+                <div class="form-group mt-2 mb-3" >
+                    <label for="tiempo">Tiempo en Meses</label>
                     <input type="number" class="form-control" id="tiempo"
-                    placeholder="Ingresa la cantidad de meses" min="1" value="1">
+                    placeholder="Ingresa la cantidad de meses " min="1" value="1" >
 
                 </div>
-                <div class="form-group mt-2 mb-3">
-                    <label for="interres">Interes mensual</label>
+                <div class="form-group mt-2 mb-3" >
+                    <label for="interes">Interés Mensual</label>
                     <input type="text" class="form-control" id="interes"
-                    placeholder="Ingresar la tasa de interes mensual">
+                    placeholder="Ingresar la tasa de interés mensual">
 
                 </div>
-                <div class="form-group mt-2 mb-3 alert-danger" hidden
+                <div class="form-group mt-2 mb-3 alert alert-danger" hidden 
                 id="alert-error">
                     ¡Debes llenar todos los campos!
 
                 </div>
-                <button type="button" class="btn btn-primary"
-                id="btnCalcular">Calcular</button>
+                <button type="button" class="btn btn-primary" 
+                id="btnCalcular" >Calcular</button>
             </div>
-            <div class="col-12 col-sm-12 col-lg-6">
-                <table id="lista-tabla" class="table">
+            <div class="col-12 col-sm-12 col-lg-6" >
+                <table id="lista-tabla" class="table" >
                     <thead>
                         <tr>
                             <th>Fecha</th>
-                            <th>Amortizacion</th>
-                            <th>Interes</th>
+                            <th>Amortización</th>
+                            <th>Interés</th>
                             <th>Cuota</th>
                             <th>Saldo</th>
                         </tr>
@@ -55,18 +61,12 @@
             </div>
 
         </div>
+    </div>
 
+    <script src="js/aleman.js" ></script>
+    <script src="js/dayjs.min.js" ></script>
 
-
-
-
-
-
-
-
-
-
-        !-- Option 1: Bootstrap Bundle with Popper -->
+        <!-- Option 1: Bootstrap Bundle with Popper -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
         crossorigin="anonymous"></script>
